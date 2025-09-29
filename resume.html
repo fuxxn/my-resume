@@ -1,47 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="utf-8">
-    <title>個人履歷</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>傅傳智｜個人履歷</title>
+  <style>
+    :root {
+      --bg:#f6f7fb; --card:#ffffff; --text:#1d212a;
+      --muted:#6b7280; --border:#e6e8ef; --shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark){
+      :root {
+        --bg:#0c0f14; --card:#12161c; --text:#e5e7eb;
+        --muted:#99a1b3; --border:#1f2733; --shadow:none;
+      }
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",Roboto,Helvetica,Arial;
+      background:var(--bg);color:var(--text);line-height:1.7;
+    }
+    a{color:#2563eb;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:40px auto;padding:0 20px}
+    header{
+      display:flex;align-items:center;gap:20px;
+      background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:20px;box-shadow:var(--shadow)
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:16px;
+      object-fit:cover;border:1px solid var(--border);background:#d1d5db
+    }
+    h1{font-size:28px;margin-bottom:4px}
+    .meta{margin-top:8px;color:var(--muted);font-size:14px}
+    main{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media (max-width:760px){main{grid-template-columns:1fr}}
+    section{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:18px;box-shadow:var(--shadow)
+    }
+    section + section{margin-top:16px}
+    h2{font-size:18px;margin-bottom:10px}
+    ul{margin-left:20px}
+    li{margin:6px 0}
+    p{margin-top:6px}
+  </style>
 </head>
 <body>
-    <h1>個人履歷</h1>
-    <h2>基本資料</h2>
-    <img src="profile.jpg" alt="我的照片" width="200"><br>
-    <p>姓名 : 傅傳智<br>
-         電子郵件 : k55660921@gmail.com<br>
-         電話 : 0975-175-606</p>
+<div class="wrap">
+  <!-- 頁首 -->
+  <header>
+    <img class="avatar" src="profile.jpg" alt="個人照片" />
+    <div>
+      <h1>傅傳智</h1>
+      <div class="meta">
+        📧 k55660921@gmail.com
+        📱 0975-175-606
+      </div>
+    </div>
+  </header>
 
-    <h2>學歷</h2>
-    <ul>
-        <li>就讀中原大學 智慧運算與大數據學士班</li>
-        <li>畢業於苗栗縣建台高中</li>
-    </ul>
+  <main>
+    <div>
+      <section>
+        <h2>學歷</h2>
+        <ul>
+          <li>就讀中原大學 智慧運算與大數據學士班</li>
+          <li>畢業於苗栗縣建台高中</li>
+        </ul>
+      </section>
 
-    <h2>幹部經驗</h2>
-    <ul>
-        <li>班長、風紀</li>
-        <li>掘音社總務</li>
-    </ul>
+      <section>
+        <h2>幹部經驗</h2>
+        <ul>
+          <li>班長、風紀</li>
+          <li>掘音社總務</li>
+        </ul>
+      </section>
+      <section>
+        <h2>語言能力</h2>
+        <ul>
+          <li>中文 : 母語</li>
+          <li>英文 : GEPT 中級</li>
+        </ul>
+      </section>
+    </div>
 
-    <h2>語言能力</h2>
-    <ul>
-        <li>中文 : 母語</li>
-        <li>英文 : GEPT 中級</li>
-    </ul>
+    <div>
+      <section>
+        <h2>程式能力</h2>
+        <ul>
+          <li>Python</li>
+        </ul>
+      </section>
 
-    <h2>程式能力</h2>
-    <ul>
-        <li>Python</li>
-    </ul>
+      <section>
+        <h2>興趣</h2>
+        <p>打球、遊戲</p>
+      </section>
 
-    <h2>興趣</h2>
-    <p>打球、遊戲</p>
+      <section>
+        <h2>特殊專長</h2>
+        <p>高中在社團中擔任bass手</p>
+      </section>
 
-    <h2>特殊專長</h2>
-    <p>高中在社團中擔任bass手</p>
-
-    <h2>未來目標</h2>
-    <p>希望在大學階段能扎實學習數學與程式以及更多專業，找到適合自己的發展方向。</p>
+      <section>
+        <h2>未來目標</h2>
+        <p>希望在大學階段能扎實學習數學與程式以及更多專業，找到適合自己的發展方向。</p>
+      </section>
+    </div>
+  </main>
+</div>
 </body>
 </html>
